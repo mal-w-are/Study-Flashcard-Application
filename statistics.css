@@ -1,0 +1,30 @@
+/* Basic styling for the statistics page */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+}
+
+#statisticsPage {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+#statisticsPage h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+#activityChart {
+    width: 75%;
+    height: 75%;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
+}
+
+

@@ -1,0 +1,143 @@
+[debug] [2024-11-20T11:09:51.771Z] ----------------------------------------------------------------------
+[debug] [2024-11-20T11:09:51.776Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\apoka\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-11-20T11:09:51.777Z] CLI Version:   13.26.0
+[debug] [2024-11-20T11:09:51.777Z] Platform:      win32
+[debug] [2024-11-20T11:09:51.777Z] Node Version:  v20.15.1
+[debug] [2024-11-20T11:09:51.777Z] Time:          Wed Nov 20 2024 14:09:51 GMT+0300 (East Africa Time)
+[debug] [2024-11-20T11:09:51.777Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-20T11:09:51.785Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-20T11:09:51.785Z] > authorizing via signed-in user (apokalypc8@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\apoka\OneDrive\Документи\Study Flashcard Application
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-11-20T11:11:23.705Z] Checked if tokens are valid: true, expires at: 1732104563992
+[debug] [2024-11-20T11:11:23.705Z] Checked if tokens are valid: true, expires at: 1732104563992
+[debug] [2024-11-20T11:11:23.714Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-11-20T11:11:24.786Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-11-20T11:11:24.786Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project study-flashcard-application (Study Flashcard Application) 
+[info] 
+=== Dataconnect Setup
+[debug] [2024-11-20T11:11:36.257Z] Checked if tokens are valid: true, expires at: 1732104563992
+[debug] [2024-11-20T11:11:36.257Z] Checked if tokens are valid: true, expires at: 1732104563992
+[debug] [2024-11-20T11:11:36.257Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/study-flashcard-application/billingInfo [none]
+[debug] [2024-11-20T11:11:37.359Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/study-flashcard-application/billingInfo 200
+[debug] [2024-11-20T11:11:37.359Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/study-flashcard-application/billingInfo {"name":"projects/study-flashcard-application/billingInfo","projectId":"study-flashcard-application","billingAccountName":"","billingEnabled":false}
+[info] i  dataconnect: ensuring required API sqladmin.googleapis.com is enabled... 
+[debug] [2024-11-20T11:11:37.360Z] Checked if tokens are valid: true, expires at: 1732104563992
+[debug] [2024-11-20T11:11:37.360Z] Checked if tokens are valid: true, expires at: 1732104563992
+[debug] [2024-11-20T11:11:37.361Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/study-flashcard-application/services/sqladmin.googleapis.com [none]
+[debug] [2024-11-20T11:11:37.361Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/study-flashcard-application/services/sqladmin.googleapis.com x-goog-quota-user=projects/study-flashcard-application
+[debug] [2024-11-20T11:11:39.307Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/study-flashcard-application/services/sqladmin.googleapis.com 200
+[debug] [2024-11-20T11:11:39.307Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/study-flashcard-application/services/sqladmin.googleapis.com [omitted]
+[warn] !  dataconnect: missing required API sqladmin.googleapis.com. Enabling now... 
+[debug] [2024-11-20T11:11:39.308Z] Checked if tokens are valid: true, expires at: 1732104563992
+[debug] [2024-11-20T11:11:39.308Z] Checked if tokens are valid: true, expires at: 1732104563992
+[debug] [2024-11-20T11:11:39.308Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/study-flashcard-application/services/sqladmin.googleapis.com:enable [none]
+[debug] [2024-11-20T11:11:39.308Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/study-flashcard-application/services/sqladmin.googleapis.com:enable x-goog-quota-user=projects/study-flashcard-application
+[debug] [2024-11-20T11:11:40.996Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/study-flashcard-application/services/sqladmin.googleapis.com:enable 200
+[debug] [2024-11-20T11:11:40.997Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/study-flashcard-application/services/sqladmin.googleapis.com:enable [omitted]
+[debug] [2024-11-20T11:11:51.005Z] Checked if tokens are valid: true, expires at: 1732104563992
+[debug] [2024-11-20T11:11:51.005Z] Checked if tokens are valid: true, expires at: 1732104563992
+[debug] [2024-11-20T11:11:51.005Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/study-flashcard-application/services/sqladmin.googleapis.com [none]
+[debug] [2024-11-20T11:11:51.005Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/study-flashcard-application/services/sqladmin.googleapis.com x-goog-quota-user=projects/study-flashcard-application
+[debug] [2024-11-20T11:11:54.415Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/study-flashcard-application/services/sqladmin.googleapis.com 200
+[debug] [2024-11-20T11:11:54.415Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/study-flashcard-application/services/sqladmin.googleapis.com [omitted]
+[info] +  dataconnect: required API sqladmin.googleapis.com is enabled 
+[info] +  Wrote dataconnect\dataconnect.yaml 
+[info] +  Wrote dataconnect\schema\schema.gql 
+[info] +  Wrote dataconnect\connector\connector.yaml 
+[info] +  Wrote dataconnect\connector\queries.gql 
+[info] +  Wrote dataconnect\connector\mutations.gql 
+[info] i  If you'd like to add the generated SDK to your app your, run firebase init dataconnect:sdk 
+[info] i  If you'd like to provision a CloudSQL Postgres instance on the Firebase Data Connect no-cost trial:
+1. Please upgrade to the pay-as-you-go (Blaze) billing plan. Visit the following page:
+     https://console.firebase.google.com/project/study-flashcard-application/usage/details
+2. Run firebase init dataconnect again to configure the Cloud SQL instance.
+3. Run firebase deploy --only dataconnect to deploy your Data Connect service. 
+[info] 
+=== Firestore Setup
+[debug] [2024-11-20T11:11:54.448Z] Checked if tokens are valid: true, expires at: 1732104563992
+[debug] [2024-11-20T11:11:54.448Z] Checked if tokens are valid: true, expires at: 1732104563992
+[debug] [2024-11-20T11:11:54.449Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/study-flashcard-application/services/firestore.googleapis.com [none]
+[debug] [2024-11-20T11:11:54.449Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/study-flashcard-application/services/firestore.googleapis.com x-goog-quota-user=projects/study-flashcard-application
+[debug] [2024-11-20T11:11:55.855Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/study-flashcard-application/services/firestore.googleapis.com 200
+[debug] [2024-11-20T11:11:55.855Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/study-flashcard-application/services/firestore.googleapis.com [omitted]
+[debug] [2024-11-20T11:11:55.856Z] Checked if tokens are valid: true, expires at: 1732104563992
+[debug] [2024-11-20T11:11:55.856Z] Checked if tokens are valid: true, expires at: 1732104563992
+[debug] [2024-11-20T11:11:55.856Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/study-flashcard-application/databases/(default) [none]
+[debug] [2024-11-20T11:11:56.955Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/study-flashcard-application/databases/(default) 200
+[debug] [2024-11-20T11:11:56.955Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/study-flashcard-application/databases/(default) {"name":"projects/study-flashcard-application/databases/(default)","uid":"c4655d0e-2cbd-49d8-b169-fb1d1a8c6600","createTime":"2024-11-16T17:32:56.737652Z","updateTime":"2024-11-16T17:32:56.737652Z","locationId":"africa-south1","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2024-11-20T10:11:58.625597Z","appEngineIntegrationMode":"DISABLED","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"INWKkL/j6okDMPTG5pex4YkD"}
+[debug] [2024-11-20T11:11:56.956Z] database_type: FIRESTORE_NATIVE
+[debug] [2024-11-20T11:11:56.956Z] database_type: FIRESTORE_NATIVE
+[debug] [2024-11-20T11:11:56.956Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-20T11:11:56.956Z] > authorizing via signed-in user (apokalypc8@gmail.com)
+[debug] [2024-11-20T11:11:56.956Z] [iam] checking project study-flashcard-application for permissions ["firebase.projects.get"]
+[debug] [2024-11-20T11:11:56.956Z] Checked if tokens are valid: true, expires at: 1732104563992
+[debug] [2024-11-20T11:11:56.956Z] Checked if tokens are valid: true, expires at: 1732104563992
+[debug] [2024-11-20T11:11:56.956Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/study-flashcard-application:testIamPermissions [none]
+[debug] [2024-11-20T11:11:56.957Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/study-flashcard-application:testIamPermissions x-goog-quota-user=projects/study-flashcard-application
+[debug] [2024-11-20T11:11:56.957Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/study-flashcard-application:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-11-20T11:11:58.661Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/study-flashcard-application:testIamPermissions 200
+[debug] [2024-11-20T11:11:58.661Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/study-flashcard-application:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-11-20T12:09:47.475Z] Checked if tokens are valid: false, expires at: 1732104563992
+[debug] [2024-11-20T12:09:47.475Z] Checked if tokens are valid: false, expires at: 1732104563992
+[debug] [2024-11-20T12:09:47.476Z] > refreshing access token with scopes: []
+[debug] [2024-11-20T12:09:47.476Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-11-20T12:09:47.477Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-20T12:09:48.027Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-11-20T12:09:48.028Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-20T12:09:48.060Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/study-flashcard-application/releases pageSize=10&pageToken=
+[debug] [2024-11-20T12:09:49.333Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/study-flashcard-application/releases 200
+[debug] [2024-11-20T12:09:49.333Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/study-flashcard-application/releases {"releases":[{"name":"projects/study-flashcard-application/releases/cloud.firestore","rulesetName":"projects/study-flashcard-application/rulesets/b09082cb-c958-4188-a7f3-9e293822875b","createTime":"2024-11-16T17:33:01.392277Z","updateTime":"2024-11-20T09:28:21.950997Z"}]}
+[debug] [2024-11-20T12:09:49.334Z] Found ruleset: projects/study-flashcard-application/rulesets/b09082cb-c958-4188-a7f3-9e293822875b
+[debug] [2024-11-20T12:09:49.334Z] Checked if tokens are valid: true, expires at: 1732108187028
+[debug] [2024-11-20T12:09:49.334Z] Checked if tokens are valid: true, expires at: 1732108187028
+[debug] [2024-11-20T12:09:49.334Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/study-flashcard-application/rulesets/b09082cb-c958-4188-a7f3-9e293822875b [none]
+[debug] [2024-11-20T12:09:50.120Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/study-flashcard-application/rulesets/b09082cb-c958-4188-a7f3-9e293822875b 200
+[debug] [2024-11-20T12:09:50.120Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/study-flashcard-application/rulesets/b09082cb-c958-4188-a7f3-9e293822875b [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-11-20T12:10:11.367Z] Checked if tokens are valid: true, expires at: 1732108187028
+[debug] [2024-11-20T12:10:11.367Z] Checked if tokens are valid: true, expires at: 1732108187028
+[debug] [2024-11-20T12:10:11.367Z] Checked if tokens are valid: true, expires at: 1732108187028
+[debug] [2024-11-20T12:10:11.367Z] Checked if tokens are valid: true, expires at: 1732108187028
+[debug] [2024-11-20T12:10:11.368Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/study-flashcard-application/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2024-11-20T12:10:11.371Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/study-flashcard-application/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2024-11-20T12:10:12.704Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/study-flashcard-application/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2024-11-20T12:10:12.705Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/study-flashcard-application/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2024-11-20T12:10:12.941Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/study-flashcard-application/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2024-11-20T12:10:12.941Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/study-flashcard-application/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/study-flashcard-application/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] 
+=== Genkit Setup
+[debug] [2024-11-20T12:10:17.985Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\apoka\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:269:49)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[error] 
+[error] Error: An unexpected error has occurred.

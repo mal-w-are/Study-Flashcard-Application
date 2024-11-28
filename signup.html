@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+            <input type="text" id="signup-name" placeholder="First Name" required>
+            <input type="email" id="signup-email" placeholder="Email" required>
+            <div class="password-wrapper">
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <span id="toggle-signup-password" class="show-password-icon">
+                    <i class="fas fa-eye"></i>
+                </span>
+            </div>
+            <div class="password-wrapper">
+                <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                <span id="toggle-confirm-password" class="show-password-icon">
+                    <i class="fas fa-eye"></i>
+                </span>
+            </div>
+            <div id="signup-error-message" class="error-message"></div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBsHyYYgkMSrYo2xgufZ2wzSygYfZxrJWY",
+            authDomain: "study-flashcard-application.firebaseapp.com",
+            projectId: "study-flashcard-application",
+            storageBucket: "study-flashcard-application.appspot.com",
+            messagingSenderId: "698845137592",
+            appId: "1:698845137592:web:a577e50b043edda67e024d",
+            measurementId: "G-FE16XLHB78"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+
+        function togglePasswordVisibility(passwordField, toggleButton) {
+            toggleButton.addEventListener('click', function () {
+                const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordField.setAttribute('type', type);
+                this.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
+            });
+        }
+
+        const signupPasswordField = document.getElementById('signup-password');
+        const confirmPasswordField = document.getElementById('confirm-password');
+        const toggleSignupPassword = document.getElementById('toggle-signup-password');
+        const toggleConfirmPassword = document.getElementById('toggle-confirm-password');
+
+        togglePasswordVisibility(signupPasswordField, toggleSignupPassword);
+        togglePasswordVisibility(confirmPasswordField, toggleConfirmPassword);
+
+        document.getElementById("signup-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const name = document.getElementById("signup-name").value;
+            const email = document.getElementById("signup-email").value;
+            const password = document.getElementById("signup-password").value;
+            const confirmPassword = confirmPasswordField.value;
+            const errorMessage = document.getElementById("signup-error-message");
+
+            errorMessage.textContent = "";
+
+            const passwordCriteria = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+            if (!passwordCriteria.test(password)) {
+                errorMessage.textContent = "Password must be at least 8 characters long and include an uppercase letter, a lowercase letter, a number, and a special character.";
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                errorMessage.textContent = "Passwords do not match.";
+                confirmPasswordField.style.borderColor = "red";
+                return;
+            } else {
+                confirmPasswordField.style.borderColor = "";
+            }
+
+            createUserWithEmailAndPassword(auth, email, password)
+                .then(() => {
+                    localStorage.setItem("displayName", name);
+                    alert("Sign-up successful!");
+                    window.location.href = "login.html";
+                })
+                .catch((error) => {
+                    if (error.code === 'auth/email-already-in-use') {
+                        errorMessage.textContent = "This email is already registered.";
+                    } else if (error.code === 'auth/weak-password') {
+                        errorMessage.textContent = "Password should be at least 6 characters.";
+                    } else {
+                        errorMessage.textContent = "Error: " + error.message;
+                    }
+                });
+        });
+    </script>
+</body>
+</html>
